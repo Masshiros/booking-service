@@ -9,6 +9,7 @@ import {
   MaxLength,
   MinLength,
 } from 'class-validator';
+import { Match } from 'src/share/decorator/match.decorator';
 import { EUserRole } from 'src/share/interface';
 
 export class CreateUserDto {
@@ -34,13 +35,15 @@ export class CreateUserDto {
   @IsString()
   @IsNotEmpty()
   password: string;
-  
+
   @MaxLength(20)
   @MinLength(8)
   @IsStrongPassword()
   @IsString()
   @IsNotEmpty()
+  @Match('password')
   password2: string;
+  
   @MaxLength(20)
   @MinLength(1)
   @IsString()
