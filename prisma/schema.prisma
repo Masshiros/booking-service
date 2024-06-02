@@ -23,5 +23,5 @@ model User{
   emailVerified Boolean @default(false)
   isActive      Boolean @default(false)
   createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  updatedAt     DateTime @default(now()) @updatedAt
 }
