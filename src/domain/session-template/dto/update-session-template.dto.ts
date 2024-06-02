@@ -8,7 +8,7 @@ import {
   MinLength,
 } from 'class-validator';
 
-export class CreateSessionTemplateDto {
+export class UpdateSessionTemplateDto {
   @ApiProperty({
     type: String,
     required: true,
@@ -19,7 +19,7 @@ export class CreateSessionTemplateDto {
   @MaxLength(50)
   @IsString()
   @IsNotEmpty()
-  name: string;
+  name?: string;
 
   @ApiProperty({
     type: String,
@@ -30,5 +30,5 @@ export class CreateSessionTemplateDto {
   @Min(5)
   @IsNumber()
   @IsNotEmpty()
-  duration: number;
+  duration?: number;
 }
