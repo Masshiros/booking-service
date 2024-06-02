@@ -5,11 +5,11 @@ import {
   IsNotEmpty,
   IsOptional,
   IsString,
-  IsStrongPassword,
   MaxLength,
   MinLength,
 } from 'class-validator';
 import { Match } from 'src/share/decorator/match.decorator';
+import { IsStrongPassword } from 'src/share/decorator/strong-password.decorator';
 import { EUserRole } from 'src/share/interface';
 
 export class CreateUserDto {
